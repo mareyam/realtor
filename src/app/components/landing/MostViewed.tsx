@@ -30,7 +30,7 @@ const MostViewedSection = () => {
         </div>
 
         <div className="flex justify-center">
-          <div className="w-full sm:w-4/5 flex flex-col md:flex-row justify-between items-center bg-white border p-4 rounded-lg shadow-xl">
+          <div className="w-full sm:w-4/5 flex flex-col md:flex-row justify-between items-center bg-white  p-4 rounded-lg shadow-xl">
             {/* filter */}
             <div className="flex flex-wrap gap-4 mb-4 md:mb-0">
               {['New Developments', 'Used Properties', 'Rentals'].map(

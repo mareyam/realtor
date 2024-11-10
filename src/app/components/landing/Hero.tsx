@@ -117,7 +117,7 @@ const Dropdown: React.FC<DropdownProps> = ({
         <span className="text-gray-500 ml-2">⌄</span>
       </button>
       {isOpen && (
-        <div className="absolute mt-2 w-full bg-white border rounded shadow-lg z-10">
+        <div className="absolute mt-2 w-full bg-white rounded shadow-lg z-10">
           {options.map((option) => (
             <button
               key={option}
