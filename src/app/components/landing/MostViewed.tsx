@@ -61,20 +61,19 @@ const MostViewedSection = () => {
           </div>
         </div>
 
-        <div className="mt-12 flex justify-center">
-          <div className="w-4/5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 gap-8">
+        <div className="border border-red-600 w-full mt-12 flex justify-center">
+          <div className="border border-red-600 w-full md:w-4/5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 gap-8">
             {/* filtered properties and details */}
             {filteredProperties.map((property, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-2xl shadow-xl transition-shadow duration-300 hover:shadow-xl w-full max-w-sm sm:max-w-full mx-auto"
+                className="border border-red-600 bg-white p-6 rounded-2xl shadow-xl transition-shadow duration-300 hover:shadow-2xl w-full max-w-full sm:max-w-sm mx-auto"
               >
                 <img
                   src={property.imageUrl}
                   alt={property.title}
                   className="w-full h-68 rounded-t-xl object-cover mb-4"
                 />
-
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   {property.title}
                 </h3>

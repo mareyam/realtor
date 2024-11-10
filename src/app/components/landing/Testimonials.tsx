@@ -13,7 +13,7 @@ const TestimonialCard: React.FC<TestimonialInterface> = ({
   rating,
 }) => {
   return (
-    <div className="justify-between bg-gray-100 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center w-full max-w-xs h-96">
+    <div className="justify-center bg-gray-100 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center w-full max-w-xs h-96 sm:max-w-full sm:w-full">
       <div className=" bg-gray-800 rounded-full w-16 h-16 mb-6"></div>
 
       <h3 className=" text-lg font-semibold text-gray-800 mb-2">{name}</h3>
@@ -52,7 +52,7 @@ const TestimonialsSection: React.FC = () => {
           1024: { slidesPerView: 3, slidesPerGroup: 3 },
         }}
         modules={[Pagination, Navigation]}
-        className="w-full max-w-4xl"
+        className="border border-4 w-full sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-4xl"
       >
         {testimonials.map((testimonial, index) => (
           <SwiperSlide key={index}>

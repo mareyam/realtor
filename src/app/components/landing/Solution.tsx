@@ -4,7 +4,7 @@ const Solution: React.FC = () => {
   return (
     <div
       className="
-      border-4 bg-primaryBlue py-12 px-6 flex flex-col items-center"
+     bg-primaryBlue py-12 px-6 flex flex-col items-center"
     >
       <div
         className="
