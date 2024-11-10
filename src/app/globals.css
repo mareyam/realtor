@@ -1,3 +1,19 @@
+:root {
+  --font-geist-sans: 'Geist Sans', sans-serif;
+  --font-geist-mono: 'Geist Mono', monospace;
+  --font-montagu-slab: 'Montagu Slab', serif;
+}
+
+.font-montagu {
+  font-family: var(--font-montagu-slab);
+}
+.font-geist-sans {
+  font-family: var(--font-geist-sans);
+}
+
+.font-geist-mono {
+  font-family: var(--font-geist-mono);
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
