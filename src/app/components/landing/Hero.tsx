@@ -10,85 +10,82 @@ const Hero = () => {
   const [dropdown4, setDropdown4] = useState<string>('Any');
 
   const handleSearch = () => {
-    console.log(
-      'Search initiated with selections:',
-      dropdown1,
-      dropdown2,
-      dropdown3,
-      dropdown4
-    );
+    console.log('Search');
   };
 
   return (
     <div
-      className="bg-cover bg-center h-screen flex flex-col items-center justify-center overflow-x-hidden px-4"
+      className="bg-cover bg-center h-screen flex items-center justify-center overflow-x-hidden px-4"
       style={{ backgroundImage: "url('/Hero.svg')" }}
     >
-      <div className="text-center mb-8 px-4 relative">
-        <h1 className="font-montagu text-4xl md:text-5xl lg:text-88 font-regular">
-          The <span className="text-primaryOrange">Solution</span> to Finding
-          Your <br className="hidden md:block" />
-          Dream Home is{' '}
-          <span className="relative inline-block text-primaryOrange">
-            Here
-            <img
-              className="absolute -bottom-4 left-1/2 transform -translate-x-1/2"
-              src="/HeroVector.svg"
+      <div className="h-96 w-full max-w-7xl flex flex-col justify-between p-4">
+        {/* hero  */}
+        <div className="text-center px-4 relative">
+          <h1 className="font-montagu text-4xl md:text-5xl lg:text-88 font-regular">
+            The <span className="text-primaryOrange">Solution</span> to Finding
+            Your <br className="hidden md:block" />
+            Dream Home is{' '}
+            <span className="relative inline-block text-primaryOrange">
+              Here
+              <img
+                className="absolute -bottom-4 left-1/2 transform -translate-x-1/2"
+                src="/HeroVector.svg"
+              />
+            </span>
+          </h1>
+          <p className="font-montagu mt-4 text-base md:text-md text-black font-regular">
+            We help you find your dream home
+          </p>
+        </div>
+
+        {/* filter btns */}
+        <div className="w-full bg-white p-6 rounded-md shadow-lg">
+          <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-4 items-end">
+            {/* custom dropdowns */}
+            <Dropdown
+              label="Property Type"
+              options={filters.propertyTypes.map((option) => option.name)}
+              selectedValue={dropdown1}
+              onSelect={(value) => setDropdown1(value)}
             />
-          </span>
-        </h1>
-        <p className="font-montagu mt-4 text-base md:text-md text-black font-regular">
-          We help you find your dream home
-        </p>
-      </div>
+            <Dropdown
+              label="Location"
+              options={filters.locations.map((option) => option.name)}
+              selectedValue={dropdown2}
+              onSelect={(value) => setDropdown2(value)}
+            />
+            <Dropdown
+              label="Price Range"
+              options={filters.priceRanges.map((option) => option.price)}
+              selectedValue={dropdown3}
+              onSelect={(value) => setDropdown3(value)}
+            />
+            <Dropdown
+              label="Filter"
+              options={filters.additionalFilters.map((option) => option.name)}
+              selectedValue={dropdown4}
+              onSelect={(value) => setDropdown4(value)}
+            />
 
-      <div className="max-w-7xl w-full bg-white p-6 rounded-md shadow-lg">
-        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-4 items-end">
-          {/* Dropdowns */}
-          <Dropdown
-            label="Property Type"
-            options={filters.propertyTypes.map((option) => option.name)}
-            selectedValue={dropdown1}
-            onSelect={(value) => setDropdown1(value)}
-          />
-          <Dropdown
-            label="Location"
-            options={filters.locations.map((option) => option.name)}
-            selectedValue={dropdown2}
-            onSelect={(value) => setDropdown2(value)}
-          />
-          <Dropdown
-            label="Price Range"
-            options={filters.priceRanges.map((option) => option.price)}
-            selectedValue={dropdown3}
-            onSelect={(value) => setDropdown3(value)}
-          />
-          <Dropdown
-            label="Filter"
-            options={filters.additionalFilters.map((option) => option.name)}
-            selectedValue={dropdown4}
-            onSelect={(value) => setDropdown4(value)}
-          />
+            <div className="hidden lg:flex justify-end">
+              <button
+                onClick={handleSearch}
+                className="bg-primaryOrange text-black py-4 px-8 font-medium w-full lg:w-auto"
+              >
+                Search Property
+              </button>
+            </div>
+          </div>
 
-          {/* Button Section on Large Screens */}
-          <div className="hidden lg:flex justify-end">
+          {/* btn for smaller screen */}
+          <div className="flex lg:hidden justify-center mt-4">
             <button
               onClick={handleSearch}
-              className="bg-primaryOrange text-white py-2 px-8 rounded-md w-full lg:w-auto"
+              className="bg-primaryOrange text-black py-2 px-6 font-medium w-full md:w-auto"
             >
               Search Property
             </button>
           </div>
-        </div>
-
-        {/* Centered Button Section on Smaller Screens */}
-        <div className="flex lg:hidden justify-center mt-4">
-          <button
-            onClick={handleSearch}
-            className="bg-primaryOrange text-white py-2 px-6 rounded-md w-full md:w-auto"
-          >
-            Search Property
-          </button>
         </div>
       </div>
     </div>
@@ -97,7 +94,6 @@ const Hero = () => {
 
 export default Hero;
 
-// Dropdown component remains the same but with the imported interface
 const Dropdown: React.FC<DropdownProps> = ({
   label,
   options,

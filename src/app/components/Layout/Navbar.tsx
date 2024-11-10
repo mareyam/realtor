@@ -11,6 +11,7 @@ const Navbar = () => {
 
   return (
     <div className="bg-primaryBlue font-montagu">
+      {/* desktop nav */}
       <header className="inset-x-0 top-0">
         <nav
           className="flex items-center justify-between px-8 z-50"
@@ -80,6 +81,7 @@ const Navbar = () => {
           </div>
         </nav>
 
+        {/* mobile nav */}
         {isMenuOpen && (
           <div className="lg:hidden" role="dialog" aria-modal="true">
             <div className="fixed inset-0 z-50" onClick={toggleMenu}></div>

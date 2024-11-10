@@ -3,18 +3,17 @@ import { chooseUsData } from '@/app/data/chooseus';
 
 const ChooseUs: React.FC = () => {
   return (
-    <div className="bg-blue-100 py-12 px-6 flex justify-center ">
-      <div className="w-full p-8 px-12 rounded-lg bg-blue-100">
+    <div className="bg-primaryBlue py-12 px-6 flex justify-center ">
+      <div className="w-full p-8 px-12 rounded-lg bg-primaryBlue">
         <h2 className="font-montagu text-3xl font-regular text-center mb-8">
           Why Choose Us
         </h2>
-
-        {/* Set gap to 0 on sm screens, and gap-8 on larger screens */}
+        {/* card ui */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0 sm:gap-8 text-left">
           {chooseUsData.map((card, index) => (
             <div
               key={index}
-              className="p-4 flex flex-col items-left rounded-lg bg-blue-100"
+              className="p-4 flex flex-col items-left rounded-lg bg-primaryBlue"
             >
               <img
                 src={card.imageUrl}

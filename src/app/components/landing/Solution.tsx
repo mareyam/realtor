@@ -4,14 +4,12 @@ const Solution: React.FC = () => {
   return (
     <div
       className="
-      border-4 bg-blue-100 py-12 px-6 flex flex-col items-center"
+      border-4 bg-primaryBlue py-12 px-6 flex flex-col items-center"
     >
-      {/* Top Section: Title and Text with Button */}
       <div
         className="
-    w-4/5 flex flex-col md:flex-row justify-between items-start mb-8 mx-auto p-6 bg-blue-100 rounded-lg"
+    w-4/5 flex flex-col md:flex-row justify-between items-start mb-8 mx-auto p-6 bg-primaryBlue rounded-lg"
       >
-        {/* Title */}
         <div
           className=" 
           md:w-1/2 2xl:w-1/3
@@ -22,7 +20,6 @@ const Solution: React.FC = () => {
           </h2>
         </div>
 
-        {/* Text and Button */}
         <div
           className="
         md:w-1/2
@@ -41,7 +38,6 @@ const Solution: React.FC = () => {
       </div>
 
       <div className="w-4/5 mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
-        {/* Left Image - Large */}
         <div className="col-span-1 sm:col-span-2">
           <div className="aspect-w-4 aspect-h-3">
             <img
@@ -52,7 +48,6 @@ const Solution: React.FC = () => {
           </div>
         </div>
 
-        {/* Right Image Stack - Smaller */}
         <div className="flex flex-col gap-4">
           <div className="aspect-w-4 aspect-h-3">
             <img

@@ -1,5 +1,3 @@
-// updatesData.ts
-
 export interface Update {
   title: string;
   description: string;

@@ -10,7 +10,7 @@ const FooterLinkSection: React.FC<{ title: string; links: string[] }> = ({
       <ul className="text-[#919191] space-y-2">
         {links.map((link, index) => (
           <li key={index}>
-            <a href="#" className="hover:text-orange-500">
+            <a href="#" className="text-sm hover:text-orange-500">
               {link}
             </a>
           </li>
@@ -24,14 +24,14 @@ const Footer: React.FC = () => {
   return (
     <div className="bg-gray-100 py-12 px-6 ">
       <div className="flex flex-col md:flex-row justify-between items-center max-w-6xl mx-auto gap-8">
-        {/* Address Section */}
+        {/* address */}
         <div className="text-lg text-black text-center md:text-left">
           <p>123 Anywhere St.,</p>
           <p>Any City, ST 12345</p>
         </div>
 
-        {/* Links Section */}
-        <div className="flex flex-col md:flex-row justify-center items-start gap-8 text-gray-700">
+        {/* links */}
+        <div className="space-x-12 flex flex-col md:flex-row justify-center items-start gap-8 text-gray-700">
           <FooterLinkSection
             title="About Us"
             links={['How It Works', 'Contact Us', 'Blog & News']}
@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
           />
         </div>
 
-        {/* Contact Info */}
+        {/* contact */}
         <div className="text-center md:text-left">
           <h4 className="text-xl font-semibold text-gray-800">We Are</h4>
           <h4 className="text-xl font-semibold text-gray-800">Ready To</h4>
@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      {/* Bottom Section */}
+      {/* all rights */}
       <div className="mt-8 text-center text-gray-500">
         ©2027 Havenova. All Rights Reserved
       </div>

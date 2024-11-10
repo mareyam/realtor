@@ -15,8 +15,6 @@ const Landing = () => {
             <ChooseUs />
             <TestimonialsSection />
             <ContactUsSection />
-
-
         </div>
     )
 }

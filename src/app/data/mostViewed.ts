@@ -1,5 +1,3 @@
-// propertiesData.ts
-
 export interface Property {
   title: string;
   description: string;
